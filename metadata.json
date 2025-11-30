@@ -1,0 +1,8 @@
+{
+  "name": "Copy of v3",
+  "description": "نظام محاسبي متكامل لإدارة معمل فحص الذهب وعمليات البيع والشراء، مصمم بواجهة ثلاثية الأبعاد.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

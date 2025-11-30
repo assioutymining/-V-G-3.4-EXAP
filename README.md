@@ -1,11 +1,43 @@
-<div align="center">
+# Pyramids Gold System v2.0
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+نظام محاسبي متكامل لإدارة معمل فحص الذهب وعمليات البيع والشراء.
 
-  <h1>Built with AI Studio</h2>
+## تعليمات التثبيت والتشغيل (Installation)
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+### 1. تثبيت المكتبات
+```bash
+npm install
+```
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+### 2. التشغيل للتطوير (Development)
+```bash
+npm run dev
+```
 
-</div>
+### 3. بناء نسخة الويب (GitHub Pages)
+```bash
+npm run build
+```
+ستجد الملفات الجاهزة في مجلد `dist`.
+
+### 4. بناء نسخة سطح المكتب (Windows .exe)
+تأكد من وجود جميع الملفات، ثم:
+```bash
+npm run electron:build
+```
+ستجد ملف التثبيت `.exe` في مجلد `release`.
+
+### 5. بناء تطبيق الموبايل (Android .apk)
+```bash
+# تثبيت أدوات أندرويد أولاً
+npm install @capacitor/android
+npx cap add android
+
+# بناء التطبيق
+npm run android:build
+```
+سيفتح هذا الأمر Android Studio، ومن هناك يمكنك استخراج ملف APK.
+
+## الملاحظات
+- تأكد من تثبيت Node.js على جهازك.
+- لتطبيق الموبايل، تحتاج إلى تثبيت Android Studio.

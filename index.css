@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-gray-200 font-sans antialiased overflow-hidden;
+  }
+  
+  /* Ensure Inputs have clear text in dark mode */
+  input, select, textarea {
+    @apply text-white placeholder-zinc-500;
+  }
+}
+
+/* Custom Scrollbar for WebKit */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0f0f; 
+}
+::-webkit-scrollbar-thumb {
+  background: #333; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37; 
+}
+
+/* Ticker Animation */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
+.animate-marquee {
+    animation: marquee 60s linear infinite;
+}
+
+/* Utility Classes */
+.clip-path-slant {
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+/* Print Specific Styles */
+@media print {
+  .no-print { display: none !important; }
+  body { 
+      background-color: white !important; 
+      color: black !important; 
+      overflow: visible !important;
+  }
+  .print-only { display: block !important; }
+  .print-dark-text { color: black !important; }
+  .print-border { border: 1px solid #000 !important; }
+  @page { margin: 0; }
+  
+  /* Ensure backgrounds render in print if user enables it */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

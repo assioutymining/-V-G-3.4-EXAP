@@ -1,0 +1,15 @@
+{
+  "appId": "com.pyramidsgold.app",
+  "appName": "Pyramids Gold",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "Keyboard": {
+      "resize": "body",
+      "style": "dark",
+      "resizeOnFullScreen": true
+    }
+  }
+}
